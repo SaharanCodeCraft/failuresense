@@ -1,0 +1,35 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+
+# --------------------
+# Jupyter
+# --------------------
+.ipynb_checkpoints/
+
+# --------------------
+# Environment / secrets
+# --------------------
+.env
+.env.*
+
+# --------------------
+# Data (raw data should never be pushed)
+# --------------------
+data/raw/*.csv
+
+# --------------------
+# Models / artifacts
+# --------------------
+*.pkl
+*.joblib
+*.h5
+
+# --------------------
+# OS / Editor junk
+# --------------------
+.DS_Store
+Thumbs.db
+.vscode/
