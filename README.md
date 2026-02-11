@@ -1,4 +1,4 @@
-# 🚀 FailureSense  
+# FailureSense  
 ### Intelligent Predictive Maintenance & Risk-Aware Decision Support System
 
 FailureSense is an end-to-end machine learning system designed to predict industrial machine failures and translate probabilistic outputs into actionable maintenance decisions.
@@ -13,7 +13,7 @@ This project demonstrates production-oriented ML engineering practices including
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Industrial machines generate continuous sensor telemetry, yet failures are:
 
