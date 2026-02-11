@@ -3,36 +3,48 @@
 
 FailureSense is an end-to-end machine learning system designed to predict industrial machine failures and translate probabilistic outputs into actionable maintenance decisions.
 
-This project demonstrates production-oriented ML engineering practices including calibrated classification, recall-first threshold tuning, modular inference pipelines, API deployment, and a full-stack dashboard interface.
+This project demonstrates production-oriented ML engineering practices including:
+
+- Calibrated classification  
+- Recall-first threshold tuning  
+- Modular inference pipelines  
+- API deployment using FastAPI  
+- Full-stack dashboard integration (React + Vite)  
 
 ---
 
 ## 🎯 Problem Statement
 
-Industrial machines generate continuous sensor telemetry, but failures are rare and costly. Traditional rule-based monitoring systems:
+Industrial machines generate continuous sensor telemetry, yet failures are:
+
+- Rare  
+- Costly  
+- Operationally disruptive  
+
+Traditional rule-based monitoring systems often:
 
 - Miss early failure signals  
-- Produce high false alarms  
-- Lack explainability  
+- Produce excessive false alarms  
+- Lack interpretability  
 - Provide no structured decision support  
 
-FailureSense addresses this by combining statistical learning with operational risk logic.
+FailureSense addresses this gap by combining statistical learning with operational risk intelligence.
 
 ---
 
 ## 🧠 System Design
 
-FailureSense operates in **two clearly separated stages**:
+FailureSense operates in **two clearly separated stages**, ensuring modularity, interpretability, and maintainability.
 
 ---
 
 ### 🟢 Stage 1 — Failure Probability Estimation
 
 - Champion Model: **Gradient Boosting Classifier**
-- Probability calibration applied
+- Probability calibration applied  
 - Optimized for **rare-event recall**
-- Cost-sensitive threshold tuning
-- Outputs calibrated failure probability
+- Cost-sensitive threshold tuning  
+- Outputs calibrated failure probability  
 
 This stage answers:
 
@@ -42,24 +54,23 @@ This stage answers:
 
 ### 🟡 Stage 2 — Operational Risk Intelligence
 
-Stage 2 transforms statistical probability into decision support:
+Stage 2 converts statistical probability into structured decision support:
 
 - Sensor anomaly detection  
 - Stress score computation  
-- Risk stratification: **LOW / MEDIUM / HIGH**  
-- Human-readable explanation  
-- Actionable maintenance recommendation  
+- Risk stratification: **LOW / MEDIUM / HIGH**
+- Human-readable explanation engine  
+- Actionable maintenance recommendations  
 
 This stage answers:
 
 > “What does this mean operationally, and what should we do?”
 
-The separation between prediction and decision logic ensures modularity, interpretability, and maintainability.
+The separation between prediction and decision logic ensures scalability and production readiness.
 
 ---
 
 ## 🏗 System Architecture
-
 React Frontend (Vite)
 ↓
 FastAPI Backend
@@ -74,41 +85,29 @@ Calibrated Model Artifacts (models/)
 - Clear separation between UI, API, and ML logic  
 - Model artifacts versioned independently  
 - Business logic decoupled from statistical prediction  
-- REST-based communication between frontend and backend  
+- REST-based communication  
 - Scalable structure suitable for containerization  
 
 ---
 
 ## 📦 Project Structure
 
-
-### Architecture Principles
-
-- Clear separation between UI, API, and ML logic  
-- Model artifacts versioned independently  
-- Business logic decoupled from statistical prediction  
-- REST-based communication between frontend and backend  
-- Scalable structure suitable for containerization  
-
----
-
-## 📦 Project Structure
-
-src/
-inference.py # Production inference logic
-preprocessing.py # Input transformation & feature handling
-stage2_logic.py # Risk intelligence and explanation engine
-
-models/
-calibrated_gb.pkl
-screening_threshold.pkl
-
-frontend/
-React dashboard (Vite)
-
-app.py # FastAPI backend
-requirements.txt
-README.md
+FailureSense/
+│
+├── src/
+│ ├── inference.py # Production inference logic
+│ ├── preprocessing.py # Input transformation & feature handling
+│ └── stage2_logic.py # Risk intelligence & explanation engine
+│
+├── models/
+│ ├── calibrated_gb.pkl
+│ └── screening_threshold.pkl
+│
+├── frontend/ # React dashboard (Vite)
+│
+├── app.py # FastAPI backend
+├── requirements.txt
+└── README.md
 
 
 ---
@@ -129,6 +128,7 @@ README.md
   "tool_wear": 120,
   "machine_type": "M"
 }
+
 {
   "risk_score": 0.8421,
   "risk_level": "HIGH",
@@ -141,9 +141,8 @@ README.md
   "recommendation": "Schedule immediate inspection and preventive maintenance."
 }
 
-
-## Technology Stack
-### Backend
+##🛠 Technology Stack
+###Backend
 
 Python
 
@@ -153,45 +152,45 @@ FastAPI
 
 joblib
 
-### Frontend
+###Frontend
 
 React
 
 Vite
 
-### Version Control
+###Version Control
 
-Git / GitHub
+Git
+
+GitHub
 
 
-Running Locally
-Backend
+##▶ Running Locally
+##1️⃣ Backend Setup
 pip install -r requirements.txt
 python -m uvicorn app:app --reload
 
 
-Backend runs at:
+###Backend runs at:
 
 http://127.0.0.1:8000
 
 
-API documentation available at:
+Interactive API documentation:
 
 http://127.0.0.1:8000/docs
 
-
-Frontend
+##2️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
 
 
-Frontend runs at:
+###Frontend runs at:
 
 http://localhost:5173
 
-
-Key Engineering Decisions
+##⚙ Key Engineering Decisions
 
 Explicit separation of statistical prediction and decision logic
 
@@ -203,7 +202,7 @@ Modular inference pipeline under src/
 
 Clean REST API contract
 
-🚧 Future Improvements
+##🚧 Future Improvements
 
 Public cloud deployment
 
@@ -215,6 +214,6 @@ Monitoring and model drift detection
 
 Logging and observability layer
 
-📄 License
+##📄 License
 
 This project is developed for educational and portfolio demonstration purposes.
