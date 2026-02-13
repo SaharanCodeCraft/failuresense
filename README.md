@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # FailureSense | Predictive Maintenance + Risk Intelligence 🧠⚙️
 
 ![Platform](https://img.shields.io/badge/Platform-Web%20Dashboard-informational)
