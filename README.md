@@ -88,16 +88,40 @@ Architecture principles:
 
 ---
 
-### 📸 Dashboard Screenshots
 
-| | | |
-| :---: | :---: | :---: |
-| ![](assets/banner-1.png) | ![](assets/banner-2.png) | ![](assets/banner-3.png) |
-| ![](assets/banner-4.png) | ![](assets/banner-5.png) | |
+## 📸 Dashboard Screenshots
+
+### 🔹 Machine Input Dashboard
+<p align="center">
+  <img src="assets/dashboard-overview.png" width="900"/>
+</p>
 
 ---
 
+### 🟢 Low Risk Assessment
+<p align="center">
+  <img src="assets/result-low.png" width="750"/>
+</p>
+
+---
+
+### 🟡 Medium Risk Assessment
+<p align="center">
+  <img src="assets/result-medium.png" width="750"/>
+</p>
+
+---
+
+### 🔴 High Risk Assessment
+<p align="center">
+  <img src="assets/result-high.png" width="750"/>
+</p>
+
+---
+
+
 ### 📦 Project Structure
+
 
 \`\`\`text
 FailureSense/
